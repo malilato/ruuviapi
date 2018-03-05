@@ -28,11 +28,6 @@ mongoose.connection.once('open', function() {
     console.log("Successfully connected to the database");
 })
 
-// define a simple route
-app.get('/', function(req, res){
-    res.json({"message": "Welcome to EasyNotes application. Take notes quickly. Organize and keep track of all your notes."});
-});
-
 // Require Ruuvi routes
 require('./app/routes/ruuvi-routes.js')(app);
 
